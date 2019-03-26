@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[better future]]></title>
+    <url>%2F2018%2F08%2F28%2Fpic1%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>misc</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[人工智能101]]></title>
+    <url>%2F2017%2F05%2F23%2Fai101%2F</url>
+    <content type="text"><![CDATA[仿佛一夜之间，人工智能就来到了你我的面前。全球最顶尖、最有影响力的技术公司都将目光转向了人工智能。但事实上早在半个多世纪以前，人工智能就已经诞生了。1956年，达特茅斯大学助理教授John McCarthy第一次提到了人工智能（Artificial Intelligence）这个词。作为一种统称，AI可用于指代可体现出智能行为的硬件或软件。按照McCarthy教受的说法，这是一种“可以制造出智能的机器，尤其是智能的计算机程序的科学和工程。”]]></content>
+      <categories>
+        <category>ai</category>
+      </categories>
+      <tags>
+        <tag>ai</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算机图形学101]]></title>
+    <url>%2F2017%2F05%2F23%2Fgfx101%2F</url>
+    <content type="text"><![CDATA[计算机图形学是一种使用数学算法将二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计算、处理和显示的相关原理与算法。虽然通常认为CG是指三维图形的处理，事实上也包括了二维图形及图像的处理。狭义地理解，计算机图形学是数字图象处理或计算机视觉的逆过程：计算机图形学是用计算机来画图像的学科，数字图象处理是把外界获得的图象用计算机进行处理的学科，计算机视觉是根据获取的图像来理解和识别其中的物体的三维信息及其他信息。 注意，这些都是不确切的定义，实际上，计算机图形学、数字图象处理和计算机视觉在很多地方的区别不是非常清晰，很多概念是相通的，而且随着研究的深入，这些学科方向不断的交叉融入，形成一个更大的学科方向，可称之为“可视计算”（Visual Computing），暂且不表。]]></content>
+      <categories>
+        <category>graphics</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello Hexo]]></title>
+    <url>%2F2017%2F05%2F23%2Fhello%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
