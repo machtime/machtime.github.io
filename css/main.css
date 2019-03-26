@@ -1242,7 +1242,7 @@ pre .javascript .function {
 .menu {
   margin-top: 20px;
   padding-left: 0;
-  text-align: center;
+  text-align: right;
 }
 .menu .menu-item {
   display: inline-block;
@@ -1895,7 +1895,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #873eff;
+  background: #ac37e0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2016,7 +2016,7 @@ pre .javascript .function {
   color: #87daff;
 }
 .footer {
-  font-size: 14px;
+  font-size: 11px;
   color: #999;
 }
 .footer img {
