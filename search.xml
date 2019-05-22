@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Monte Carlo积分]]></title>
+    <url>%2F2019%2F05%2F22%2F4montecarlo%2F</url>
+    <content type="text"><![CDATA[在很多算法应用中需要用到积分运算。但有些场景中的积分比较复杂，比如多维或不连续等情况下，很难找到原函数，所以不能用普通方法直接求解。Monte Carlo方法是解决此类问题的重要工具。 基本原理 MC积分又称统计积分或统计模拟。在求复杂函数积分的时候，如果找不到原函数，可以利用随机变量对被积函数进行采样，当采样数量很大时，对采样值进行计算得到的结果可以近似等于积分结果。 在一维情况下， 设被积函数为f(x)f(x)f(x), 积分区间为a b 之间。则积分应当为I=∫abf(x)dxI=\int_a^b {f(x)}dxI=∫​a​b​​f(x)dx。如果采用统计方法计算，设Xi(i=1,2,...,N)X_i(i=1,2,...,N)X​i​​(i=1,2,...,N)是在a b 之间均匀分布的随机变量，则积分可近似为：IN=b−aN∑i=1Nf(Xi)I_N = \frac{b-a}{N}\sum_{i=1}^{N}f(X_i)I​N​​=​N​​b−a​​∑​i=1​N​​f(X​i​​)。可以证明，INI_NI​N​​的数学期望就是III。 E[IN]=E[b−aN∑i=1Nf(Xi)]=b−aN∑i=1NE[f(Xi)]E[I_N] = E[\frac{b-a}{N}\sum_{i=1}^{N}f(X_i)] = \frac{b-a}{N}\sum_{i=1}^{N}E[f(X_i)] E[I​N​​]=E[​N​​b−a​​​i=1​∑​N​​f(X​i​​)]=​N​​b−a​​​i=1​∑​N​​E[f(X​i​​)] 设随机变量XiX_iX​i​​的概率密度函数为p(x)p(x)p(x), 则E[f(Xi)]=∫abf(x)p(x)dxE[f(X_i)]=\int_a^bf(x)p(x)dxE[f(X​i​​)]=∫​a​b​​f(x)p(x)dx，由随机变量均匀分布可得： E[IN]=b−aN∑i=1N∫abf(x)1b−adxE[I_N] = \frac{b-a}{N}\sum_{i=1}^{N}\int_a^bf(x){\frac{1}{b-a}}dx E[I​N​​]=​N​​b−a​​​i=1​∑​N​​∫​a​b​​f(x)​b−a​​1​​dx =1N∑i=1N∫abf(x)dx=∫abf(x)dx=I = \frac{1}{N}\sum_{i=1}^{N}\int_a^bf(x)dx = \int_a^bf(x)dx = I =​N​​1​​​i=1​∑​N​​∫​a​b​​f(x)dx=∫​a​b​​f(x)dx=I 类似可证，如果XiX_iX​i​​ 为非均匀分布的时候，INI_NI​N​​的数学期望也等于III。 有上述证明可知，MC积分分为两个步骤：先采样，然后求平均。由于整个过程基于随机采样，所以MC积分具有很强的通用性，而且很适合用计算机来计算。 采样方法 本质上，计算机的随机数生成算法只能从采样区间均匀采样，所以要想在计算机上实现按照一个概率分布中采样，就需要用到以下一些常用的采样方法： 逆变换采样 (Inverse Transform Sampling) 拒绝采样 (Reject Sampling) 重要性采样 (Importance Sampling) Metropolis采样 这些方法都是为了把采样值从均匀分布映射到特定的概率分布。 逆变换采样 假设最终的采样的随机变量是 X，并且分布函数是 P(X)。随机变量 Y 是通过计算机随机生成的，符合均匀分布，那么要产生 X，就是要寻找符合 P(X)=Y 的 _X_值。也就是X=P−1(Y)X=P^{-1}(Y)X=P​−1​​(Y), P−1P^{-1}P​−1​​是 P 的反函数。 拒绝采样 重要性采样 Metropolis采样 待续…]]></content>
+      <categories>
+        <category>algo</category>
+      </categories>
+      <tags>
+        <tag>algo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[better future]]></title>
-    <url>%2F2018%2F08%2F28%2Fpic1%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <url>%2F2018%2F08%2F28%2F3pic1%2F</url>
+    <content type="text"><![CDATA[可以使用 KaTeX渲染LaTeX数学表达式: Gamma行内公式展示 Γ(n)=(n−1)!∀n∈N\Gamma(n) = (n-1)!\quad\forall n\in\mathbb NΓ(n)=(n−1)!∀n∈N 是通过欧拉积分 Γ(z)=∫0∞tz−1e−tdt.\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,. Γ(z)=∫​0​∞​​t​z−1​​e​−t​​dt. ddxcosx=−sinx\frac{d}{dx}\cos x=-\sin x ​dx​​d​​cosx=−sinx P(A)=limn→∞fn(A)P{ \left( {A} \right) }= { \lim\limits_{n \to \infty } f_n{ \left( {A} \right) } } P(A)=​n→∞​lim​​f​n​​(A) 行内公式1+2=(c∗3)1+2=(c*3)1+2=(c∗3) mathop命令暂不支持]]></content>
       <categories>
         <category>misc</category>
       </categories>
   </entry>
   <entry>
     <title><![CDATA[人工智能101]]></title>
-    <url>%2F2017%2F05%2F23%2Fai101%2F</url>
-    <content type="text"><![CDATA[仿佛一夜之间，人工智能就来到了你我的面前。全球最顶尖、最有影响力的技术公司都将目光转向了人工智能。但事实上早在半个多世纪以前，人工智能就已经诞生了。1956年，达特茅斯大学助理教授John McCarthy第一次提到了人工智能（Artificial Intelligence）这个词。作为一种统称，AI可用于指代可体现出智能行为的硬件或软件。按照McCarthy教受的说法，这是一种“可以制造出智能的机器，尤其是智能的计算机程序的科学和工程。”]]></content>
+    <url>%2F2017%2F05%2F23%2F0ai101%2F</url>
+    <content type="text"><![CDATA[仿佛一夜之间，人工智能就来到了你我的面前。全球最顶尖、最有影响力的技术公司都将目光转向了人工智能。但事实上早在半个多世纪以前，人工智能就已经诞生了。 1956年，达特茅斯大学助理教授John McCarthy第一次提到了人工智能（Artificial Intelligence）这个词。作为一种统称，AI可用于指代可体现出智能行为的硬件或软件。按照McCarthy教受的说法，这是一种“可以制造出智能的机器，尤其是智能的计算机程序的科学和工程。”]]></content>
       <categories>
         <category>ai</category>
       </categories>
@@ -21,15 +32,15 @@
   </entry>
   <entry>
     <title><![CDATA[计算机图形学101]]></title>
-    <url>%2F2017%2F05%2F23%2Fgfx101%2F</url>
-    <content type="text"><![CDATA[计算机图形学是一种使用数学算法将二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计算、处理和显示的相关原理与算法。虽然通常认为CG是指三维图形的处理，事实上也包括了二维图形及图像的处理。狭义地理解，计算机图形学是数字图象处理或计算机视觉的逆过程：计算机图形学是用计算机来画图像的学科，数字图象处理是把外界获得的图象用计算机进行处理的学科，计算机视觉是根据获取的图像来理解和识别其中的物体的三维信息及其他信息。 注意，这些都是不确切的定义，实际上，计算机图形学、数字图象处理和计算机视觉在很多地方的区别不是非常清晰，很多概念是相通的，而且随着研究的深入，这些学科方向不断的交叉融入，形成一个更大的学科方向，可称之为“可视计算”（Visual Computing），暂且不表。]]></content>
+    <url>%2F2017%2F05%2F23%2F2gfx101%2F</url>
+    <content type="text"><![CDATA[计算机图形学是一种使用数学算法将二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计算、处理和显示的相关原理与算法。虽然通常认为CG是指三维图形的处理，事实上也包括了二维图形及图像的处理。 狭义地理解，计算机图形学是数字图象处理或计算机视觉的逆过程：计算机图形学是用计算机来画图像的学科，数字图象处理是把外界获得的图象用计算机进行处理的学科，计算机视觉是根据获取的图像来理解和识别其中的物体的三维信息及其他信息。 注意，这些都是不确切的定义，实际上，计算机图形学、数字图象处理和计算机视觉在很多地方的区别不是非常清晰，很多概念是相通的，而且随着研究的深入，这些学科方向不断的交叉融入，形成一个更大的学科方向，可称之为“可视计算”（Visual Computing），暂且不表。]]></content>
       <categories>
         <category>graphics</category>
       </categories>
   </entry>
   <entry>
     <title><![CDATA[Hello Hexo]]></title>
-    <url>%2F2017%2F05%2F23%2Fhello%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <url>%2F2017%2F05%2F23%2F1hello%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start Create a new post 1$ hexo new "My New Post" More info: Writing Run server 1$ hexo server More info: Server Generate static files 1$ hexo generate More info: Generating Deploy to remote sites 1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
